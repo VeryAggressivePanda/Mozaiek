@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
@@ -18,11 +18,7 @@ const AddMemory: React.FC = () => {
   const [error, setError] = useState('');
   const [showPasswordForm, setShowPasswordForm] = useState(false);
 
-  useEffect(() => {
-    fetchMemorial();
-  }, [id]);
-
-  const fetchMemorial = async () => {
+  const fetchMemorial = useCallback(async () => {
     try {
       const response = await axios.get(`/api/memorials/${id}`);
       setMemorial(response.data.memorial);
@@ -34,7 +30,11 @@ const AddMemory: React.FC = () => {
     } catch (err: any) {
       setError(err.response?.data?.error || 'Failed to load memorial');
     }
-  };
+  }, [id, password]);
+
+  useEffect(() => {
+    fetchMemorial();
+  }, [fetchMemorial]);
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

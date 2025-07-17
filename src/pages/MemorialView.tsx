@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './MemorialView.css';
@@ -32,11 +32,7 @@ const MemorialView: React.FC = () => {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
-  useEffect(() => {
-    fetchMemorial();
-  }, [id]);
-
-  const fetchMemorial = async () => {
+  const fetchMemorial = useCallback(async () => {
     try {
       const response = await axios.get(`/api/memorials/${id}`);
       setMemorial(response.data.memorial);
@@ -50,7 +46,11 @@ const MemorialView: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id, password]);
+
+  useEffect(() => {
+    fetchMemorial();
+  }, [fetchMemorial]);
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
