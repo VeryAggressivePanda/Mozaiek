@@ -1,0 +1,32 @@
+{
+  "name": "mozaiek",
+  "version": "1.0.0",
+  "description": "A beautiful online memorial service where people can create digital memorials for their loved ones",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "cd server && npm start"
+  },
+  "keywords": [
+    "memorial",
+    "service",
+    "photos",
+    "mosaic",
+    "react",
+    "nodejs",
+    "supabase"
+  ],
+  "author": "VeryAggressivePanda",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

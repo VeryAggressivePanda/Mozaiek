@@ -1,0 +1,348 @@
+.memorial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.memorial-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.memorial-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.memorial-description {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.memorial-meta {
+  color: #718096;
+  font-size: 1rem;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a5568;
+  padding: 3rem;
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #feb2b2;
+}
+
+.password-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.password-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.password-form p {
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.password-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.password-form input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.password-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.mosaic-section {
+  margin-bottom: 4rem;
+}
+
+.mosaic-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.base-image {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.base-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mosaic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease;
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 1px;
+}
+
+.mosaic-tile {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mosaic-tile:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.mosaic-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.mosaic-info {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mosaic-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.mosaic-info p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 600;
+}
+
+.memories-section {
+  margin-top: 4rem;
+}
+
+.memories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.memories-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.add-memory-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-memory-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.empty-memories {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-memories h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.empty-memories p {
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.memory-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.memory-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.memory-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memory-content {
+  padding: 1.5rem;
+}
+
+.memory-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.memory-content p {
+  color: #4a5568;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.memory-date {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .memorial-container {
+    padding: 1rem;
+  }
+  
+  .memorial-header h1 {
+    font-size: 2rem;
+  }
+  
+  .mosaic-container {
+    max-width: 100%;
+  }
+  
+  .base-image {
+    height: 300px;
+  }
+  
+  .memories-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .memories-grid {
+    grid-template-columns: 1fr;
+  }
+}
